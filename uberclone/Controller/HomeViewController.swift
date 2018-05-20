@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  uberclone
 //
 //  Created by Ryan Chingway on 5/20/18.
@@ -9,7 +9,9 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class HomeViewController: UIViewController, MKMapViewDelegate {
+    
+    var delegate: CenterVCDelegate?
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var actionButton: RoundedShadowButton!
@@ -23,6 +25,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBAction func actionBtnPressed(_ sender: Any) {
         actionButton.animateButton(shouldLoad: true, withMessage: nil)
     }
+    
+    @IBAction func menuBtnPressed(_ sender: Any) {
+        delegate?.toggleLeftPanel()
+    }
+    
     
 }
 
