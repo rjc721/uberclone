@@ -23,11 +23,15 @@ class RoundedCornerTextField: UITextField {
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRect(x: 0 + textRectOffset, y: 0, width: self.frame.width - textRectOffset, height: self.frame.height)
+        return bounds.offsetBy(dx: textRectOffset, dy: 0)
+    }
+
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.offsetBy(dx: textRectOffset, dy: 0)
     }
     
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRect(x: 0 + textRectOffset, y: 0, width: self.frame.width - textRectOffset, height: self.frame.height)
+    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.offsetBy(dx: textRectOffset, dy: 0)
     }
 
 }

@@ -23,6 +23,8 @@
 		18E7309C20B23D4C0090F1E6 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7309B20B23D4C0090F1E6 /* UIViewExt.swift */; };
 		18E7309E20B244140090F1E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7309D20B244140090F1E6 /* LoginViewController.swift */; };
 		18E730A020B2451C0090F1E6 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7309F20B2451C0090F1E6 /* RoundedCornerTextField.swift */; };
+		18E730A220B30EB00090F1E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E730A120B30EB00090F1E6 /* GoogleService-Info.plist */; };
+		18E730A520B310350090F1E6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E730A420B310350090F1E6 /* DataService.swift */; };
 		D5DD93FDDB4D317440E1403F /* Pods_uberclone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7848085731C114F63D77E3 /* Pods_uberclone.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		18E7309B20B23D4C0090F1E6 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		18E7309D20B244140090F1E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18E7309F20B2451C0090F1E6 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		18E730A120B30EB00090F1E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18E730A420B310350090F1E6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		9E7848085731C114F63D77E3 /* Pods_uberclone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uberclone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE65F7B9C37C682BE539FAC4 /* Pods-uberclone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uberclone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uberclone/Pods-uberclone.debug.xcconfig"; sourceTree = "<group>"; };
 		EC92DBDE19A6D19E62568AE8 /* Pods-uberclone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uberclone.release.xcconfig"; path = "Pods/Target Support Files/Pods-uberclone/Pods-uberclone.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,16 +96,18 @@
 		18164B4520B1F2F100326F21 /* uberclone */ = {
 			isa = PBXGroup;
 			children = (
+				18E730A320B3101F0090F1E6 /* Services */,
 				18E7309A20B23D300090F1E6 /* Extensions */,
-				18164B4620B1F2F100326F21 /* AppDelegate.swift */,
 				18E7309720B22D100090F1E6 /* Protocols */,
 				18E7308820B206460090F1E6 /* Model */,
 				18E7308720B206400090F1E6 /* View */,
 				18E7308620B206380090F1E6 /* Controller */,
+				18164B4620B1F2F100326F21 /* AppDelegate.swift */,
 				18164B4A20B1F2F100326F21 /* Main.storyboard */,
 				18164B4D20B1F2F200326F21 /* Assets.xcassets */,
 				18164B4F20B1F2F200326F21 /* LaunchScreen.storyboard */,
 				18164B5220B1F2F200326F21 /* Info.plist */,
+				18E730A120B30EB00090F1E6 /* GoogleService-Info.plist */,
 			);
 			path = uberclone;
 			sourceTree = "<group>";
@@ -151,6 +157,14 @@
 				18E7309B20B23D4C0090F1E6 /* UIViewExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18E730A320B3101F0090F1E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18E730A420B310350090F1E6 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		72C43353A0B6472C8658CCD6 /* Frameworks */ = {
@@ -222,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18164B5120B1F2F200326F21 /* LaunchScreen.storyboard in Resources */,
+				18E730A220B30EB00090F1E6 /* GoogleService-Info.plist in Resources */,
 				18164B4E20B1F2F200326F21 /* Assets.xcassets in Resources */,
 				18164B4C20B1F2F100326F21 /* Main.storyboard in Resources */,
 			);
@@ -282,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E7309E20B244140090F1E6 /* LoginViewController.swift in Sources */,
+				18E730A520B310350090F1E6 /* DataService.swift in Sources */,
 				18E7309920B22D2A0090F1E6 /* CenterVCDelegate.swift in Sources */,
 				18E7309220B20D120090F1E6 /* RoundedShadowButton.swift in Sources */,
 				18E7309420B229B20090F1E6 /* LeftSidePanelVC.swift in Sources */,
