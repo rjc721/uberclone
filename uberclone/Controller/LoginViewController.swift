@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: RoundedCornerTextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var signUpButton: RoundedShadowButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             }
                         }
                         
-                        print("We have liftoff!")
                         self.dismiss(animated: true, completion: nil)
                         
                     } else {
